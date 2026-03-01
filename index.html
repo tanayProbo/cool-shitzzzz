@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarkTech Gesture Interface</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- MediaPipe Hands -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+
+<body>
+    <div id="loading">
+        <div class="loader-content">
+            <div class="reactor"></div>
+            <h1>BOOTING J.A.R.V.I.S. INTERFACE</h1>
+            <p>Calibrating Spatial Sensors...</p>
+        </div>
+    </div>
+
+    <!-- Video Feed (Hidden from layout, rendered into canvas or behind it) -->
+    <video class="input_video" playsinline style="display: none;"></video>
+
+    <!-- Main Output Viewport -->
+    <div id="canvas-container"></div>
+
+    <!-- HUD Overlay for text/status -->
+    <div class="hud-overlay">
+        <div class="top-left">
+            <div class="hud-item">SYS.STATUS: <span class="active">ONLINE</span></div>
+            <div class="hud-item">FPS: <span id="fps">0</span></div>
+        </div>
+        <div class="bottom-left">
+            <div class="hud-item">GESTURE: <span id="gesture-display">NONE</span></div>
+            <div class="hud-item">INTERACTION ID: <span id="interaction-id">#00-00</span></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Roast.ai",
+  "description": "A savage, meme-savvy comedian AI that turns your input into shareable roasts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["AI Content Generation"]
+}
